@@ -1,0 +1,120 @@
+footer.footer {
+  padding: 50px 0;
+  background: #0F0F0F;
+  color: #EEE;
+  @include fz(16);
+
+  a {
+    color: #EEE;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+.footer-top {
+  padding-bottom: 35px;
+  margin-bottom: 45px;
+  border-bottom: 2px solid rgba(#999, .5);
+
+  &-flex {
+    align-items: flex-start;
+  }
+}
+.footer-logo {
+	padding-right: 25px;
+	margin-right: 25px;
+	position: relative;
+
+	&:after {
+		content: "";
+		position: absolute;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		width: 1px;
+		background: $primary;
+	}
+}
+
+.footer-menu {
+	flex: 1 0 auto;
+
+	li {
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 40px;
+	}
+	a {
+		display: block;
+		height: 34px;
+		line-height: 34px;
+		white-space: nowrap;
+	}
+}
+
+.footer-contacts {
+  padding-top: 10px;
+  flex: 0 0 495px;
+
+  &-item {
+    margin-bottom: 10px;
+  }
+  &-link {
+    display: inline-block;
+    position: relative;
+    padding-left: 18px;
+
+    svg.sprite {
+      width: 12px;
+      height: 12px;
+      position: absolute;
+      left: 0;
+      top: 0.25em;
+      fill: #EEE;
+    }
+    &:hover {
+      svg.sprite {
+        fill: $primary;
+      }
+    }
+  }
+}
+.footer-title {
+  margin-bottom: 20px;
+
+  span {
+    display: inline-block;
+    padding-bottom: 6px;
+    border-bottom: 1px solid $primary;
+  }
+}
+.footer-adres {
+  line-height: 2;
+  margin-top: -5px;
+}
+.footer-dev {
+  &-link {
+    display: inline-block;
+    position: relative;
+    padding-right: 30px;
+    margin-right: 7px;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 18px;
+      height: 29px;
+      background: url(../images/svg/farba.svg) center no-repeat;
+      background-size: contain;
+    }
+  }
+}

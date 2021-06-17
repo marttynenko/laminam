@@ -1,0 +1,172 @@
+// Colors & BG's ---
+$bgc: #EEE;
+$bg: #f8f8f8;
+$font: #171717;
+$font_2: #909090;
+$font_3: #a3a3a3;
+$light: #EFEFEF;
+$titles: #D19876;
+
+$primary: #D19876;
+$primary_hover: #FF9F22;
+$primary_active: #8E6146;
+$secondary: #01B552;
+$secondary_hover: darken($secondary, 8%);
+$secondary_active: darken($secondary, 14%);
+$gray: #F1F3F6;
+$gray_hover: #77a45d;
+
+$red: #e6574e;
+$red_hover: darken($red, 10%);
+$yellow: #ffcf28;
+$yellow_hover:  darken($yellow, 15%);
+$magenta: #BB6BD9;
+$green: #27AE60;
+
+$dark: #0B194E;
+
+$link: $primary;
+$link_hover: $primary_hover;
+$link_active: $primary_active;
+$link_border: $primary_hover;
+$link_border_hover: transparent;
+
+$border: #999999;
+$border_light: #e5e5e5;
+$devider: #d6d6d6;
+
+$valid: #25a670;
+
+$input_border: #999;
+$input_hover: #DDD;
+$input_focus: #FFF;
+$input_shadow: #f6f6f6;
+$jq_border: $input_border;
+$jq_hover: darken($jq_border,15%);
+$jq_focus: $primary;
+
+
+// Layouts
+$inner: 1310;
+$gutter: 15px;
+$col_gutter: 15px;
+$block_margin: 0 0 25px;
+
+
+// Grid
+$breakpoints: ("lg":$inner,"md":992,"sm":768,"xs":576,"us":400);
+
+
+// Typography ---
+$fontsize: 18;
+$weight: 400;
+$basefont: 'Montserrat';
+$playfair: 'Playfair Display';
+$titlesfont: $playfair;
+$lh: 1.42;
+$th: (23/14);
+$paragraph_margin: 0px 0px 22px;
+
+// headings
+$headings_font_family: $titlesfont;
+$headings_margin: 22px 0px 18px;
+$headings_font_weight: 600;
+$headings_color: $titles;
+$headings_text_transform: none;
+$h1: 70;
+$h2: 36;
+$h3: 30;
+$h4: 24;
+$h5: 20;
+$h6: $fontsize;
+
+$block_heading_font_size: 24;
+$block_heading_font_weight: 700;
+
+// article typography
+$article_font_size: 16;
+$article_line_height: (22/$article_font_size);
+$article_paragraph_margin: $paragraph_margin;
+$article_img_margin: $paragraph_margin;
+$article_font_weight: $weight;
+
+
+// Buttons & Inputs ---
+$btn_font_size: 18;
+$btn_font_weight: 700;
+$btn_text_transform: none;
+$btn_height: 58px;
+$btn_height_big: 80px;
+$btn_height_mini: 46px;
+$btn_paddings: 0px 25px;
+$btn_border_width: 2px;
+$btn_border_color: $primary;
+$btn_border_radius: 0px;
+$btn_color: $primary;
+
+$input_height: 50px;
+$input_paddings: 0px;
+$input_border_radius: $btn_border_radius;
+$input_bg: transparent;
+
+$checkbox_size: 24px;
+$checkbox_border_radius: 0px;
+$radio_size: $checkbox_size;
+
+
+// Breadcrumbs ---
+$bread_font_size: 14;
+$bread_bg: none;
+$bread_color: $font;
+$bread_link_color: $font;
+$bread_paddings: 0px;
+$bread_margin: 0px 0px 35px;
+
+
+// Pgn
+// $pgn_color: $font;
+// $pgn_font_weight: 400;
+// $pgn_margin: 5px;
+// $pgn_padding: 0px 5px;
+// $pgn_height: 50px;
+// $pgn_bg: #FFF;
+// $pgn_border_radius: 0;
+// $pgn_border: 1px;
+// $pgn_border_active: 1px;
+// $pgn_bg_active: $secondary;
+
+
+// Other ---
+$footer_bg: #2c2c2c;
+$footer_paddings: 54px 0px;
+$footer_color: #7a7a7a;
+$footer_link_color: #7a7a7a; 
+
+$sticker_bg: $secondary;
+$sticker_color: #FFF;
+$sticker_height: 26px;
+$sticker_height_mini: 20px;
+$sticker_paddings: 0px 12px;
+$sticker_font_size: 8;
+$sticker_font_weight: 700;
+$sticker_text_transform: uppercase;
+$sticker_border_radius: 0px;
+$sticker_font: $basefont;
+$sticker_font_style: normal;
+
+$shadow: 0px 0px 20px -3px rgba(60, 60, 60, 0.25);
+$shadow_focus: 0px 0px 30px -3px rgba(60, 60, 60, 0.35);
+$shadow_light: 0px 0px 8px -1px rgba(85, 85, 85, 0.1);;
+$beizer: cubic-bezier(.3,.53,.38,.73);
+
+$trn_d: .4s; //transition-delay
+
+
+@mixin fz($f_size) {
+	font-size: $f_size + px;
+	font-size: $f_size/16 + rem;
+}
+
+@mixin ls($lsp) {
+	letter-spacing: $lsp/1000 + em;
+}
