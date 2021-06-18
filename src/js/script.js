@@ -172,6 +172,8 @@ jQuery(document).ready(function($){
 				const slickMain = $('.slick-main').slick({
 					lazyLoad: 'ondemand',
 					fade: true,
+					autoplay: true,
+					autoplayTimeout: 4500,
 					appendArrows: $('.slick-main-arrows')
 				})
 				// slickMain.on('lazyLoaded',function(event, slick, image,imageSource){
@@ -239,13 +241,13 @@ jQuery(document).ready(function($){
 			'https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.5/jquery.inputmask.min.js',
 			'',
 			function() {
-				$('.mask-phone').inputmask('+999 (99) 999-99-99',{
+				$('.mask-phone').inputmask('+799 999-9999',{
 				})
-				$('.mask-phone').on('focus',function(){
-					if (this.value == '') {
-						this.value = '+375'
-					}
-				})
+				// $('.mask-phone').on('focus',function(){
+				// 	if (this.value == '') {
+				// 		this.value = '+375'
+				// 	}
+				// })
 			}
 		)
 	}
