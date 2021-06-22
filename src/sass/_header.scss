@@ -102,3 +102,167 @@ header.header {
 		}
 	}
 }
+.mm-toggler {
+	display: none;
+	visibility: hidden;
+}
+
+@media (max-width: 1310px) {
+	.header-menu {
+		li {
+			margin-right: 25px;
+		}
+	}
+	.header-contacts {
+		&-link {
+			font-size: 0;
+			height: 16px;
+			padding-left: 16px;
+			margin-right: 20px;
+			vertical-align: middle;
+
+			svg.sprite {
+				width: 16px;
+				height: 16px;
+				top: 0;
+			}
+			span {
+				display: none;
+			}
+		}
+	}
+}//1310
+
+
+@media (max-width: 992px) {
+	header.header {
+		padding: 0;
+	}
+	.header-flex {
+		position: relative;
+		padding: 15px 60px 15px 0;
+	}
+	.header-logo {
+		margin-right: 0;
+
+		&:after {
+			content: none;
+		}
+	}
+	.header-menu {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		z-index: 99;
+		background: #0F0F0F;
+		padding: 20px 0px;
+		visibility: hidden;
+		opacity: 0;
+		transform: translate3d(0, 10px, 0);
+		transition: visibility .1s, opacity .1s, transform .1s;
+
+		&.opened {
+			visibility: visible;
+			opacity: 1;
+			transform: translate3d(0, 0px, 0);
+		}
+
+		&:before {
+			content: "";
+			position: absolute;
+			left: -400px;
+			right: -400px;
+			top: 0;
+			bottom: 0;
+			background: #0F0F0F;
+			border-top: 1px solid #444;
+			z-index: -1;
+		}
+
+		li {
+			display: block;
+			margin-right: 0;
+		}
+	}
+	.mm-toggler {
+		display: block;
+		visibility: visible;
+		width: 34px;
+		height: 34px;
+		cursor: pointer;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		margin-top: -17px;
+
+		&-line {
+			position: absolute;
+			width: 24px;
+			height: 2px;
+			right: 0;
+			background: #FFF;
+			top: 50%;
+			margin-top: -1px;
+			transition: transform .1s;
+
+			&-1 {
+				transform: translate(0, -8px);
+			}
+			&-3 {
+				transform: translate(0, 8px);
+			}
+		}
+		&.opened {
+			.mm-toggler-line {
+				transform: translate(0, 0px);
+			}
+		}
+	}
+}//992
+
+
+@media (max-width: 576px) {
+
+	.header-flex {
+		padding-right: 50px;
+	}
+	.header-contacts {
+		&-link {
+			margin-right: 15px;
+		}
+		&-callback {
+			padding-left: 0;
+			padding-right: 0;
+			border-top: 0;
+			border-bottom: 0;
+			@include fz(13);
+			text-align: center;
+			line-height: 1.05;
+			max-width: 65px;
+			vertical-align: middle;
+			height: auto;
+
+
+			&:before,
+			&:after {
+				content: none;
+				
+			}
+		}
+	}
+}//576px
+
+@media (max-width: 420px) {
+	.header-flex {
+		padding-right: 34px;
+	}
+	.header-contacts {
+		white-space: nowrap;
+
+		&-callback {
+			display: none;
+			visibility: hidden;
+		}
+	}
+}

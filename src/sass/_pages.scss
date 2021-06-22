@@ -126,12 +126,16 @@
 		padding: 0px 25px;
 		margin: 0 auto;
 	}
+	&-logo {
+		margin-bottom: 10px;
+	}
 	&-title {
 		@include fz(56);
+		line-height: 1.1;
+		margin-bottom: 10px;
 	}
 	&-txt {
 		@include fz(26);
-		
 	}
 	&-arrows {
 		position: absolute;
@@ -300,6 +304,7 @@
 
 	&-content {
 		display: inline-block;
+		width: 80%;
 		max-width: 630px;
 		text-align: left;
 	}

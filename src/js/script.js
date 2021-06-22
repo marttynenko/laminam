@@ -194,6 +194,13 @@ jQuery(document).ready(function($){
 		}
 	})
 
+
+	$('.mm-toggler').on('click',function(e){
+		e.preventDefault();
+		$(this).toggleClass('opened');
+		$('.header-menu').toggleClass('opened');
+	})
+
 	
 	
 

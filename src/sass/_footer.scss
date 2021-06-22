@@ -26,6 +26,8 @@ footer.footer {
 	padding-right: 25px;
 	margin-right: 25px;
 	position: relative;
+  max-width: 185px;
+  flex: 0 0 185px;
 
 	&:after {
 		content: "";
@@ -40,6 +42,7 @@ footer.footer {
 
 .footer-menu {
 	flex: 1 0 auto;
+  max-width: 50%;
 
 	li {
 		display: inline-block;
@@ -93,6 +96,10 @@ footer.footer {
 .footer-adres {
   line-height: 2;
   margin-top: -5px;
+
+  a {
+    text-decoration: underline;
+  }
 }
 .footer-dev {
   &-link {
@@ -115,6 +122,70 @@ footer.footer {
       height: 29px;
       background: url(../images/svg/farba.svg) center no-repeat;
       background-size: contain;
+    }
+  }
+}
+
+@media (max-width: 1310px) {
+  .footer {
+    &-top-flex {
+      flex-wrap: wrap;
+    }
+    &-contacts {
+      flex: 0 0 100%;
+      max-width: 100%;
+      padding-top: 40px;
+    }
+    &-menu {
+      flex: 0 0 calc(100% - 210px);
+      max-width: calc(100% - 210px);
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .footer-bottom {
+    &-flex {
+      display: block;
+      text-align: center;
+    }
+  }
+  .footer-copy {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-logo {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-right: 0;
+    padding-right: 0;
+    margin-bottom: 30px;
+    text-align: center;
+
+    &:after {
+      content: none;
+    }
+    .logo-link {
+      display: inline-block;
+    }
+  }
+  .footer-menu {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+
+    li {
+      margin: 0px 10px 0px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .footer-contacts {
+    .col-us-6:first-child {
+      margin-bottom: 20px;
     }
   }
 }
