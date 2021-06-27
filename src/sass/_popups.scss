@@ -4,87 +4,14 @@
   background: #858585;
 }
 .mfp-popup {
-  background: #FFF;
+  background: #1C1C1C;
+  border: 1px solid #999999;
   position: relative;
   padding: 40px 55px;
-  border-radius: 5px;
+  border-radius: 0px;
   width: 96%;
-  max-width: 480px;
+  max-width: 605px;
   margin: 20px auto;
-
-  &-title {
-    margin-top: 0;
-    margin-bottom: 25px;
-    text-align: center;
-    line-height: 1.1;
-  }
-  &-aftertitle {
-    margin-top: -10px;
-    margin-bottom: 22px;
-    text-align: center;
-    padding: 0px 15px;
-
-    a {
-      text-decoration: underline;
-
-      &:hover {
-        text-decoration: none;
-      }
-    }
-  }
-}
-.popup-auth {
-  padding-bottom: 50px;
-
-  &-recovery {
-    padding-top: 5px;
-
-    a {
-      text-decoration: underline;
-
-      &:hover {
-        text-decoration: none;
-      }
-    }
-  }
-  .btn {
-    min-width: 200px;
-  }
-}
-.popup-register {
-  padding-bottom: 50px;
-  max-width: 800px;
-
-  &-auth {
-    margin-top: -12px;
-    
-    a {
-      text-decoration: underline;
-
-      &:hover {
-        text-decoration: none;
-      }
-    }
-  }
-  &-dashtitle {
-    font-weight: 700;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    color: $secondary;
-    text-align: center;
-  }
-  .ui-field-btn {
-    padding-top: 20px;
-  }
-}
-.popup-recovery {
-  .h2, h2 {
-    @include fz(32);
-  }
-  &-hint {
-    margin-top: -12px;
-    text-align: center;
-  }
 }
 
 .mfp-bg {

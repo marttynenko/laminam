@@ -1,0 +1,46 @@
+<div class="mfp-popup zoom-anim-dialog popup-feedback">
+
+  <form id="feedback_popup_form">
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="ui-field">
+          <label for="name" class="ui-label ui-label-white">Ваш</label>
+          <input type="text" name="name" class="ui-input ui-input-white" placeholder="Имя" required>
+        </div>
+      </div>
+
+      <div class="col-xs-6">
+        <div class="ui-field">
+          <label for="tel" class="ui-label ui-label-white">Ваш</label>
+          <input type="tel" name="tel" class="ui-input ui-input-white mask-phone" placeholder="Телефон" required>
+        </div>
+      </div>
+    </div>
+
+    <div class="ui-field">
+      <label for="msg" class="ui-label ui-label-white">Оставьте</label>
+      <textarea name="msg" rows="4" class="ui-input ui-input-white"></textarea>
+    </div>
+
+    <div class="ui-centered">
+      <button class="ui-btn ui-btn-white ui-btn-big">Отправить <svg class="sprite ui-btn-arrow"><use xlink:href="svg/svg/symbols.svg#arrow-next"></use></svg></button>
+    </div>
+
+    
+  </form>
+
+  <script>
+    jQuery(document).ready(function($){
+      $('#feedback_popup_form').validate({
+        rules: {
+          tel: {
+            telephone: true
+          },
+          msg: {
+            minlength: 20
+          }
+        }
+      })
+    });
+  </script>
+</div>

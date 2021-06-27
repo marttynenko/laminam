@@ -1,10 +1,10 @@
 /*catalog*/
 
 .page-header {
-  height: 272px;
-  background-color: #000;
-  background-image: url("../images/bgs/catalog-background.png");
+  background: #000 url("../images/bgs/catalog-background.png") center no-repeat;
+  background-size: cover;
   padding-top: 70px;
+  padding-bottom: 90px;
 }
 
 .page-header-text {
@@ -80,16 +80,20 @@
 .collection-block {
   display: flex;
   justify-content: space-between;
-
   margin-bottom: 96px;
   height: 431px;
   transition: 0.5s;
   position: relative;
+  overflow: hidden;
 }
 
 .collection-block > img {
-  display: block;
-  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 100%;
+  transform: translate(-50%,0);
+  max-width: none;
 }
 
 .collection-block::after {
@@ -122,13 +126,9 @@
   z-index: 9;
 }
 
-.collection-block:hover>.collection-block-left {
-  width: calc(100% - 540px);
-}
-
 .collection-block-text {
   text-align: center;
-  font-family: Playfair Display;
+  font-family: "Playfair Display";
   font-style: normal;
   font-weight: normal;
   font-size: 70px;
@@ -253,7 +253,8 @@
 .ul-checkbox {
   border: 1px solid #FFFFFF;
   padding: 16px;
-  width: 230px;
+  width: 100%;
+  min-width: 150px;
   background-color: #1C1C1C;
 }
 
@@ -587,29 +588,33 @@
 
 .error-page {
   width: 100%;
-  min-height: calc(100vh - 77px);
+  min-height: calc(100vh - 78px);
   background-color: #0F0F0F;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
 }
 
 .error-inner {
   text-align: center;
-  padding: 50px;
+  padding: 30px 30px 60px;
 }
 
 .error-code {
-  font-family: Playfair Display;
+  font-family: "Playfair Display";
   font-style: normal;
   font-weight: normal;
   font-size: 200px;
-  line-height: 267px;
+  line-height: 1;
+  margin-bottom: 40px;
   letter-spacing: 0.05em;
   color: #D19876;
   text-align: center;
 }
 
 .error-date {
-  font-family: Playfair Display;
+  font-family: "Playfair Display";
   font-style: normal;
   font-weight: normal;
   font-size: 64px;
@@ -681,9 +686,239 @@
 
 @media (min-width:992px) {
   .collection-block:hover>.collection-block-right {
-
     opacity: 1;
     transition: 0.5s;
 
+  }
+  .collection-block:hover>.collection-block-left {
+    width: calc(100% - 540px);
+  }
+}
+
+@media (max-width:992px) {
+  .search-filter {
+    margin-bottom: 90px;
+  }
+  .search-filter-selects {
+    flex-wrap:  wrap;
+    margin-right: -40px;
+    margin-bottom: 20px;
+  }
+  .search-filter-checkbox {
+    flex:  0 0 calc(50% - 40px);
+    margin-right: 40px;
+    margin-bottom: 20px;
+  }
+  .search-filter-checkbox:last-child {
+    margin-right: 40px;
+  }
+  .collection-block-right {
+    display: none;
+    visibility: hidden;
+  }
+
+  .other-products {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .collection-text {
+    padding-left: 30px;
+    margin-bottom: 50px;
+  }
+  .collection-text:before {
+    left: 0;
+  }
+  .collection-name {
+    padding-left: 0;
+    font-size: 60px;
+  }
+  .product-examples .row {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  .coll-4 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .search-filter-in-collect {
+    display: block;
+  }
+  .search-filter-in-collect>.search-filter-selects {
+    margin-bottom: 20px;
+  }
+
+  .card-product {
+    padding: 40px 30px;
+  }
+  .card-product-left,
+  .card-product-image {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .card-product-image {
+    order: -1;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .card-product-image img {
+    display: inline-block;
+    max-height: 400px;
+  }
+  .card-product-method-left,
+  .card-product-method-right {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .card-product-method-left {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width:  768px) {
+  .page-header-text {
+    font-size: 45px;
+  }
+  .coll-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .product-examples-text {
+    padding: 5px 15px;
+  }
+  .card-product-name {
+    font-size: 50px;
+  }
+}
+
+@media (max-width:  576px) {
+  .breadcrumbs-box {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 10px;
+  }
+  .search-filter {
+    padding: 40px 25px;
+    margin-bottom: 65px;
+  }
+  .search-filter .apply-filter {
+    padding: 0px 25px;
+    height: 60px;
+    line-height: 1.1;
+
+  }
+  .apply-filter {
+    margin-right: 20px;
+  }
+
+  .collection-block {
+    margin-bottom: 50px;
+    height: 350px;
+  }
+  .collection-block-left {
+    padding-top: 90px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .collection-block-text {
+    font-size: 42px;
+    line-height: 1.25;
+  }
+
+  .page-header {
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+  .page-header-text {
+    font-size: 40px;
+  }
+  .collection-name {
+    font-size: 45px;
+  }
+}
+
+@media (max-width:  420px) {
+  .product-examples .row {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  .product-examples-item {
+    margin-bottom: 20px;
+  }
+  .coll-4 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .product-examples-text {
+    padding: 4px 10px;
+    font-size: 15px;
+  }
+  .ui-btn {
+    font-size: 16px;
+    font-size: 1rem;
+  }
+  .search-filter-checkbox {
+    flex:  0 0 calc(100% - 40px);
+  }
+  .card-product-name {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  .card-product-td {
+    font-size: 15px;
+  }
+  .card-product-text {
+    font-size: 16px;
+    padding-right: 0;
+  }
+}
+
+@media (max-width:  1300px) {
+  .error-code {
+    font-size: 165px;
+  }
+  .error-date {
+    font-size: 40px;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.3;
+    margin-bottom: 60px;
+  }
+  .error-date br {
+    display: none;
+  }
+  .error-btn {
+    font-size: 20px;
+    height: 70px;
+    line-height: 68px;
+    padding: 0px 30px;
+  }
+  .error-btn svg {
+    position: static;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+    height: 20px;
+    width: 40px;
+  }
+}
+
+@media (max-width:  576px) {
+  .error-code {
+    font-size: 125px;
+  }
+  .error-date {
+    font-size: 28px;
+    margin-bottom: 45px;
+  }
+  .error-btn {
+    font-size: 16px;
+  }
+  .error-btn svg {
+    height: 16px;
+    width: 34px;
+    margin-left: 5px;
   }
 }
